@@ -1,1 +1,137 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Work in Progress</title></head><body style="font-family:system-ui;display:grid;place-items:center;min-height:100vh;margin:0"><h1>1avc.de</h1></body></html>
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>1A VC - Der Founder's Field Guide für Venture Capital in Deutschland</title>
+  <meta name="description" content="Wie eine Finanzierungsrunde abläuft, Cap-Table-Rechner, Glossar und Checklisten für Gründer.">
+  <meta property="og:title" content="1A VC - Der Founder's Field Guide">
+  <meta property="og:description" content="Wie eine Finanzierungsrunde abläuft, Cap-Table-Rechner, Glossar und Checklisten für Gründer.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://1avc.de/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <nav class="nav-links">
+      <a href="#runden">Phasen</a>
+      <a href="#rechner">Cap Table</a>
+      <a href="#checkliste">Pitch Vorbereitung</a>
+      <a href="#glossar">Glossar</a>
+    </nav>
+    <div class="hero">
+      <span class="badge">Founder's Field Guide</span>
+      <h1>Venture Capital in Deutschland</h1>
+      <p class="hero-subtitle">Ein pragmatischer Leitfaden für Gründer:innen. Verstehen Sie, wie eine Finanzierungsrunde abläuft, von der Pre-Seed bis zur Series A.</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="runden" class="section">
+      <h2>Die Finanzierungsrunden</h2>
+      <p>Venture Capital ist ein gestaffelter Prozess. Jede Runde ist an bestimmte Meilensteine geknüpft, die das Risiko für Investoren senken und den Wert des Unternehmens steigern.</p>
+
+      <h3>Pre-Seed</h3>
+      <p>Die allererste institutionelle Runde. Sie haben ein starkes Team, eine große Vision und oft einen Prototypen (MVP) oder erste Kundeninterviews. Das Kapital dient dazu, das MVP marktreif zu machen und erste Traktion zu beweisen.</p>
+      <ul>
+        <li><strong>Ticketgröße:</strong> <span class="number">€250k - €1M</span></li>
+        <li><strong>Ziel:</strong> Product-Market Fit Indizien sammeln.</li>
+      </ul>
+
+      <h3>Seed</h3>
+      <p>Das Produkt ist am Markt und Sie können eine klare Wachstumsstory erzählen. Erste wiederkehrende Umsätze (MRR) sind sichtbar. Das Kapital wird genutzt, um Go-To-Market-Strategien zu testen und das Kernteam aufzubauen.</p>
+      <ul>
+        <li><strong>Ticketgröße:</strong> <span class="number">€1M - €3M</span></li>
+        <li><strong>Ziel:</strong> Skalierbare Vertriebskanäle finden und Product-Market Fit festigen.</li>
+      </ul>
+
+      <h3>Series A</h3>
+      <p>Hier geht es um Skalierung. Sie wissen genau, wie viel es kostet, einen Kunden zu akquirieren (CAC) und wie viel dieser einbringt (LTV). Das Geschäftsmodell funktioniert und muss nun mit viel Kapital auf neue Märkte oder Kundensegmente ausgeweitet werden.</p>
+      <ul>
+        <li><strong>Ticketgröße:</strong> <span class="number">€4M - €15M+</span></li>
+        <li><strong>Ziel:</strong> Marktanteile erobern und signifikantes Umsatzwachstum.</li>
+      </ul>
+    </section>
+
+    <section id="rechner" class="section">
+      <h2>Cap-Table-Rechner</h2>
+      <p>Verstehen Sie, wie sich eine Finanzierungsrunde auf Ihre Anteile auswirkt. Die Ausgabe neuer Anteile verwässert die bestehenden Gesellschafter.</p>
+
+      <div class="calc-container">
+        <div class="calc-row">
+          <label for="pre-money">Pre-Money Bewertung (€)</label>
+          <input type="number" id="pre-money" value="4000000" step="500000">
+        </div>
+        <div class="calc-row">
+          <label for="investment">Investment (€)</label>
+          <input type="number" id="investment" value="1000000" step="100000">
+        </div>
+        <div class="calc-row">
+          <label for="esop">Neuer ESOP Pool (%)</label>
+          <input type="number" id="esop" value="10" step="1">
+        </div>
+
+        <div class="calc-results">
+          <div class="result-row">
+            <span>Post-Money Bewertung:</span>
+            <span id="post-money-val" class="calc-value">-</span>
+          </div>
+          <div class="result-row">
+            <span>Anteile Investoren (Neu):</span>
+            <span id="new-investor-share" class="calc-value">-</span>
+          </div>
+          <div class="result-row total">
+            <span>Verbleibende Gründeranteile:</span>
+            <span id="founder-dilution" class="calc-value">-</span>
+          </div>
+        </div>
+      </div>
+      <p><small><em>Hinweis: Dies ist eine vereinfachte Modellrechnung. In der Realität können Wandel-Darlehen (Convertibles), Anti-Dilution-Klauseln und bestehende ESOPs die Mathematik deutlich komplexer machen.</em></small></p>
+    </section>
+
+    <section id="checkliste" class="section">
+      <h2>Pitch Vorbereitung</h2>
+      <p>Ein erfolgreicher Fundraising-Prozess ist reine Vertriebsarbeit. So bereiten Sie sich vor:</p>
+      <ul class="checklist">
+        <li><strong>Das Deck:</strong> 10-15 Slides. Problem, Lösung, Marktgröße, Geschäftsmodell, Traction, Go-To-Market, Wettbewerb, Team und der "Ask" (Wie viel Geld? Wofür?).</li>
+        <li><strong>Der Datenraum (Data Room):</strong> Ein geordneter Ordner (z.B. Notion oder Google Drive) mit dem Cap Table, Finanzplan (P&L), Verträgen wichtiger Mitarbeiter und Kunden, sowie technischen Architekturdiagrammen.</li>
+        <li><strong>Target List:</strong> Eine priorisierte Liste von 50-100 VCs. Filtern Sie nach Phase (Seed vs. Series A), Geographie und Sektor (B2B SaaS, Climate Tech, etc.).</li>
+        <li><strong>Intros:</strong> Kalte E-Mails funktionieren, aber warme Intros von anderen Gründern aus dem Portfolio des VCs haben eine deutlich höhere Conversion-Rate.</li>
+        <li><strong>Das Momentum:</strong> Versuchen Sie, alle Erstgespräche innerhalb von 2-3 Wochen zu bündeln, um künstlichen Wettbewerb (FOMO) zwischen den Investoren zu erzeugen.</li>
+      </ul>
+    </section>
+
+    <section id="glossar" class="section">
+      <h2>Glossar</h2>
+      <p>Die wichtigsten Begriffe im Venture Capital kurz erklärt.</p>
+
+      <div class="glossary-term">Term Sheet</div>
+      <div class="glossary-def">Ein unverbindliches Dokument, das die grundlegenden Bedingungen eines Investments (Bewertung, Kontrollrechte, Liquidationspräferenz) zusammenfasst, bevor die teuren Anwälte die finalen Verträge schreiben.</div>
+
+      <div class="glossary-term">Liquidationspräferenz (LiqPref)</div>
+      <div class="glossary-def">Eine Klausel, die festlegt, wer bei einem Exit (Verkauf) zuerst ausgezahlt wird. Üblich ist eine "1x Non-Participating" Präferenz, d.h. der Investor bekommt mindestens sein eingesetztes Kapital zurück, bevor der Rest nach Anteilen verteilt wird.</div>
+
+      <div class="glossary-term">ESOP (Employee Stock Ownership Plan)</div>
+      <div class="glossary-def">Ein virtuelles Beteiligungsprogramm für Mitarbeiter. VCs fordern in der Regel, dass vor oder während der Runde ein ESOP-Pool (oft 10-15%) geschaffen wird, um zukünftige Talente anziehen zu können.</div>
+
+      <div class="glossary-term">Vesting</div>
+      <div class="glossary-def">Gründer und Mitarbeiter "verdienen" sich ihre Anteile über die Zeit. Üblich ist ein 4-Jahres-Vesting mit einem 1-Jahres-"Cliff" (wenn man vor Ablauf des ersten Jahres geht, bekommt man nichts).</div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>1A VC - Educational, not an investment offer.</p>
+    <div class="footer-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
